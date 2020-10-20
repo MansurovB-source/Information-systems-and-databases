@@ -1,22 +1,22 @@
 CREATE TABLE divers (
-	id_diver serial
+	id_diver serial,
 	name varchar(32) NOT NULL,
 	surname varchar(32) NOT NULL,
-	patronymic varchar(32) NOT NULL
-	contacts varchar(20) NOT NULL
+	patronymic varchar(32) NOT NULL,
+	contacts varchar(20) NOT NULL,
 	salary decimal(8, 2) NOT NULL CHECK (salary > 0),
 	PRIMARY KEY (id_diver)
 );
 
 CREATE TABLE positions (
 	id_position serial,
-	name text NOT NULL
+	name text NOT NULL,
 	PRIMARY KEY(id_position)
 );
 
 CREATE TABLE div_position (
-	id_position integer
-	id_diver integer
+	id_position integer,
+	id_diver integer,
 	FOREIGN KEY (id_position) REFERENCES positions(id_position),
 	FOREIGN KEY (id_position) REFERENCES positions(id_position),
 	PRIMARY KEY (id_position, id_diver)
@@ -57,7 +57,7 @@ CREATE TABLE places (
 	name text NOT NULL,
 	altitude integer NOT NULL CHECK (altitude < 0),
 	id_location integer NOT NULL,
-	FOREIGN KEY (id_location) REFERENCES locations(id_location);
+	FOREIGN KEY (id_location) REFERENCES locations(id_location),
 	PRIMARY KEY (id_place)
 );
 
@@ -72,7 +72,7 @@ CREATE TABLE coordinates (
 
 CREATE TABLE divings (
 	id_diving serial,
-	id_place integer NOT NULL
+	id_place integer NOT NULL,
 	depth integer NOT NULL check (depth > 0),
 	d_time timestamp NOT NULL,
 	FOREIGN KEY (id_place) REFERENCES places(id_place),
@@ -102,7 +102,7 @@ CREATE TABLE eyes (
 	size integer NOT NULL CHECK (size > 0),
 	id_monster integer NOT NULL,
 	FOREIGN KEY (id_monster) REFERENCES monsters(id_monster),
-	PRIMARY KEY (ie_eye)
+	PRIMARY KEY (id_eye)
 );
 
 CREATE TABLE attacks (
@@ -111,7 +111,6 @@ CREATE TABLE attacks (
 	a_time timestamp NOT NULL,
 	FOREIGN KEY (id_place) REFERENCES places(id_place),
 	PRIMARY KEY (id_attack)
-	
 );
 
 CREATE TABLE monst_attack_on_team (
