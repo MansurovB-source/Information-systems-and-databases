@@ -46,7 +46,7 @@ insert into team_mem(id_team, id_diver) values(2, 5);
 insert into team_mem(id_team, id_diver) values(2, 6);
 insert into team_mem(id_team, id_diver) values(3, 7);
 insert into team_mem(id_team, id_diver) values(3, 8);
-insert into team_mem(id_team, id_diver) values(4, 9);
+insert into team_mem(id_team, id_diver) values(3, 9);
 
 insert into locations(name) values('Pacific Ocean');
 insert into locations(name) values('Atlantic Ocean');
@@ -77,7 +77,7 @@ insert into divs_team(id_diving, id_team) values(3, 3);
 insert into monsters(name, size, id_place) values('Kraken', 125000, 1);
 insert into monsters(name, size, id_place) values('Megaladon', 10000, 1);
 insert into monsters(name, size, id_place) values('Poseydon', 12500, 2);
-insert into monsters(name, size, id_place) values('Dunkleosteus', 12500, 3); //id = 4
+insert into monsters(name, size, id_place) values('Dunkleosteus', 12500, 3);
 
 insert into eyes(color, size, id_monster) values('red', 5, 1);
 insert into eyes(color, size, id_monster) values('blue', 7, 1);
@@ -85,8 +85,8 @@ insert into eyes(color, size, id_monster) values('red', 5, 2);
 insert into eyes(color, size, id_monster) values('green', 5, 2);
 insert into eyes(color, size, id_monster) values('yellow', 2, 3);
 insert into eyes(color, size, id_monster) values('brown', 2, 3);
-insert into eyes(color, size, id_monster) values('black', 1, 5); // 9
-insert into eyes(color, size, id_monster) values('brown', 1, 5); // 10
+insert into eyes(color, size, id_monster) values('black', 1, 4); // 9
+insert into eyes(color, size, id_monster) values('brown', 1, 4); // 10
 
 insert into attacks(id_place, a_time) values(1, '2000-08-15 15:05:06');
 insert into attacks(id_place, a_time) values(1, '2000-09-15 10:05:06');
