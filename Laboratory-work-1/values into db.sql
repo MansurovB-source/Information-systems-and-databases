@@ -63,23 +63,21 @@ insert into coordinates(X, Y, Z, id_place) values(255, 789, 333, 1);
 insert into coordinates(X, Y, Z, id_place) values(999, 444, 222, 2);
 insert into coordinates(X, Y, Z, id_place) values(999, 333, 111, 3); 
 
-insert into divings(id_place, depth, d_time) values(1, 7230, 2000-08-15 04:05:06);
-insert into divings(id_place, depth, d_time) values(1, 7500, 2000-09-15 04:05:06);
-insert into divings(id_place, depth, d_time) values(2, 7000, 2000-10-1 04:05:06);
-insert into divings(id_place, depth, d_time) values(3, 10000, 2000-10-15 04:05:06);
+insert into divings(id_place, depth, d_time) values(1, 7230, '2000-08-15 04:05:06');
+insert into divings(id_place, depth, d_time) values(1, 7500, '2000-09-15 04:05:06');
+insert into divings(id_place, depth, d_time) values(2, 7000, '2000-10-1 04:05:06');
+insert into divings(id_place, depth, d_time) values(3, 10000, '2000-10-15 04:05:06');
 
 insert into divs_team(id_diving, id_team) values(1, 1);
 insert into divs_team(id_diving, id_team) values(1, 2);
 insert into divs_team(id_diving, id_team) values(2, 1);
 insert into divs_team(id_diving, id_team) values(2, 2);
 insert into divs_team(id_diving, id_team) values(3, 3);
-insert into divs_team(id_diving, id_team) values(3, 3);
-insert into divs_team(id_diving, id_team) values(3, 3);
 
 insert into monsters(name, size, id_place) values('Kraken', 125000, 1);
 insert into monsters(name, size, id_place) values('Megaladon', 10000, 1);
 insert into monsters(name, size, id_place) values('Poseydon', 12500, 2);
-insert into monsters(name, size, id_place) values('Dunkleosteus', 12500, 3);
+insert into monsters(name, size, id_place) values('Dunkleosteus', 12500, 3); //id = 4
 
 insert into eyes(color, size, id_monster) values('red', 5, 1);
 insert into eyes(color, size, id_monster) values('blue', 7, 1);
@@ -87,12 +85,12 @@ insert into eyes(color, size, id_monster) values('red', 5, 2);
 insert into eyes(color, size, id_monster) values('green', 5, 2);
 insert into eyes(color, size, id_monster) values('yellow', 2, 3);
 insert into eyes(color, size, id_monster) values('brown', 2, 3);
-insert into eyes(color, size, id_monster) values('black', 1, 4);
-insert into eyes(color, size, id_monster) values('brown', 1, 4);
+insert into eyes(color, size, id_monster) values('black', 1, 5); // 9
+insert into eyes(color, size, id_monster) values('brown', 1, 5); // 10
 
-insert into attacks(id_place, a_time) values(1, 2000-08-15 15:05:06);
-insert into attacks(id_place, a_time) values(1, 2000-09-15 10:05:06);
-insert into attacks(id_place, a_time) values(3, 2000-10-15 17:05:06);
+insert into attacks(id_place, a_time) values(1, '2000-08-15 15:05:06');
+insert into attacks(id_place, a_time) values(1, '2000-09-15 10:05:06');
+insert into attacks(id_place, a_time) values(3, '2000-10-15 17:05:06');
 
 insert into monst_attack_on_team(id_attack, id_team, id_monster) values(1, 1, 1);
 insert into monst_attack_on_team(id_attack, id_team, id_monster) values(2, 2, 2);
